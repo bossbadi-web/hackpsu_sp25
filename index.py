@@ -104,23 +104,35 @@ def query_gemini(question, data):
         return None
 
 
-def generate_course_plan(data):
-    """Generates a structured course plan using Gemini API."""
+def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
+    """Generates a structured course plan using Gemini API, considering user inputs."""
     try:
+        # Remove completed courses from the data
+        filtered_data = {
+            semester: [
+                course for course in courses if course.get("courseCode") not in completed_courses
+            ]
+            for semester, courses in data.items() if isinstance(courses, list)
+        }
+
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=(
-                f"Given the major curriculum:\n{json.dumps(data, indent=2)}\n"
-                "Provide a structured course plan in a horizontal table format, "
-                "with two semesters per row. Ensure completion within six semesters, "
-                "respecting prerequisite constraints and keeping credit load under 21 per semester. "
-                "If not possible, indicate that."
+                f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
+                f"and the curriculum:\n{json.dumps(filtered_data, indent=2)}\n"
+                f"Create a structured course plan in a horizontal table format, "
+                f"with two semesters per row. Ensure completion within {years_to_graduate * 2} semesters, "
+                f"while keeping credit load under {max_credits} per semester. "
+                "Do not include any of these completed courses in the plan:\n"
+                f"{', '.join(completed_courses) if completed_courses else 'None'}.\n"
+                "If a valid plan cannot be generated, indicate that."
             )
         )
         return response.text
     except Exception as e:
         st.error(f"Error generating course plan: {e}")
         return None
+
 
 
 def display_checkboxes(items):
@@ -162,9 +174,20 @@ with col2:
         
         st.subheader("📋 Select Completed Courses")
         completed_courses = display_checkboxes(course_codes)
-
         if st.button("Generate Course Plan"):
             st.subheader("📅 Your Personalized Course Plan")
-            plan = generate_course_plan(data)
-            if plan:
-                st.write(plan)
+
+            # Generate course plan using all selected inputs
+            course_plan = generate_course_plan(
+                data=data, 
+                major=major, 
+                interests=interest, 
+                years_to_graduate=years_to_graduate, 
+                max_credits=max_credits, 
+                completed_courses=completed_courses
+            )
+
+            if course_plan:
+                st.write(course_plan)
+            else:
+                st.error("Failed to generate a course plan. Please try again.")
