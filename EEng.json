@@ -13,7 +13,7 @@
           {
             "courseCode": "EE 8 or EE 9 or ENGR 100",
             "credits": "1",
-            "prerequisites": "None"
+            "prerequisites": "First Year Seminar"
           },
           {
             "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
@@ -58,7 +58,7 @@
           {
             "courseCode": "PHYS 212",
             "credits": "4",
-            "prerequisites": "PHYS 211"
+            "prerequisites": "PHYS 211 and MATH 140"
           }
         ]
       },
@@ -73,17 +73,17 @@
           {
             "courseCode": "CMPEN 270 or CMPEN 271 and 275",
             "credits": "4",
-            "prerequisites": "CMPSC 131, MATH 141"
+            "prerequisites": "PHYS 211"
           },
           {
             "courseCode": "EE 210",
             "credits": "4",
-            "prerequisites": "MATH 141, PHYS 212"
+            "prerequisites": "PHYS 212"
           },
           {
             "courseCode": "MATH 220",
             "credits": "3",
-            "prerequisites": "MATH 141"
+            "prerequisites": "MATH 140"
           },
           {
             "courseCode": "MATH 250",
@@ -103,22 +103,22 @@
           {
             "courseCode": "EE 200",
             "credits": "3",
-            "prerequisites": "CMPEN 270 or CMPEN 271 and 275, EE 210"
+            "prerequisites": "CMPEN 270 or CMPSC 201"
           },
           {
             "courseCode": "EE 310",
             "credits": "4",
-            "prerequisites": "EE 210, MATH 220"
+            "prerequisites": "EE 210"
           },
           {
             "courseCode": "MATH 230",
             "credits": "4",
-            "prerequisites": "MATH 220"
+            "prerequisites": "MATH 141"
           },
           {
             "courseCode": "PHYS 214",
             "credits": "2",
-            "prerequisites": "PHYS 212"
+            "prerequisites": ", MATH 140, PHYS 211, PHYS 212"
           }
         ]
       },
@@ -128,17 +128,17 @@
           {
             "courseCode": "EE 330",
             "credits": "4",
-            "prerequisites": "EE 200"
+            "prerequisites": "MATH 230, EE 210"
           },
           {
             "courseCode": "EE 340",
             "credits": "4",
-            "prerequisites": "EE 210, MATH 230"
+            "prerequisites": "PHYS 214, EE 210"
           },
           {
             "courseCode": "EE 350",
             "credits": "4",
-            "prerequisites": "EE 210, MATH 230"
+            "prerequisites": "EE 210, MATH 220, MATH 250"
           },
           {
             "courseCode": "GEN ED",
@@ -147,7 +147,7 @@
           },
           {
             "courseCode": "GHW",
-            "credits": "1.5",
+            "credits": "3",
             "prerequisites": "None"
           }
         ]
@@ -158,7 +158,7 @@
           {
             "courseCode": "EE 300W",
             "credits": "3",
-            "prerequisites": "EE 330, EE 340"
+            "prerequisites": "EE 200, EE 310"
           },
           {
             "courseCode": "ENGL 202C",
@@ -188,7 +188,7 @@
           {
             "courseCode": "EE 403W",
             "credits": "3",
-            "prerequisites": "EE 300W"
+            "prerequisites": "EE 300W, ENGL 202C"
           },
           {
             "courseCode": "EE / CMPEN 300/400 LEVEL ELECTIVE",
