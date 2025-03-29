@@ -12,7 +12,7 @@
           {
             "courseCode": "CHEM 111",
             "credits": "1",
-            "prerequisites": "None"
+            "prerequisites": "CHEM 110 or 106 or 130"
           },
           {
             "courseCode": "ECON 102 or 104",
@@ -57,7 +57,7 @@
           {
             "courseCode": "PHYS 211",
             "credits": "4",
-            "prerequisites": "MATH 141"
+            "prerequisites": "MATH 140"
           },
           {
             "courseCode": "GEN ED",
@@ -66,7 +66,7 @@
           },
           {
             "courseCode": "GHW",
-            "credits": "1.5",
+            "credits": "3",
             "prerequisites": "None"
           }
         ]
@@ -82,7 +82,7 @@
           {
             "courseCode": "EMCH 211",
             "credits": "3",
-            "prerequisites": "MATH 141, PHYS 211"
+            "prerequisites": "MATH 140"
           },
           {
             "courseCode": "MATH 251",
@@ -92,7 +92,7 @@
           {
             "courseCode": "PHYS 212",
             "credits": "4",
-            "prerequisites": "PHYS 211"
+            "prerequisites": "MATH 140 and PHYS 211"
           },
           {
             "courseCode": "GEN ED",
@@ -107,12 +107,12 @@
           {
             "courseCode": "EMCH 212",
             "credits": "3",
-            "prerequisites": "EMCH 211, PHYS 212, MATH 251"
+            "prerequisites": "EMCH 211, MATH 141"
           },
           {
             "courseCode": "EMCH 213 or EMCH 213D",
             "credits": "3",
-            "prerequisites": "EMCH 211, PHYS 212, MATH 251"
+            "prerequisites": "EMCH 211"
           },
           {
             "courseCode": "CAS 100 A/B",
@@ -122,12 +122,12 @@
           {
             "courseCode": "MATH 230",
             "credits": "4",
-            "prerequisites": "MATH 251"
+            "prerequisites": "MATH 141"
           },
           {
             "courseCode": "PHYS 214",
             "credits": "2",
-            "prerequisites": "PHYS 212"
+            "prerequisites": "PHYS 212, MATH 141, PHYS 211"
           },
           {
             "courseCode": "GHW",
@@ -152,17 +152,17 @@
           {
             "courseCode": "NUCE 301",
             "credits": "4",
-            "prerequisites": "MATH 230"
+            "prerequisites": "MATH 251"
           },
           {
             "courseCode": "NUCE 309",
             "credits": "3",
-            "prerequisites": "MATH 230"
+            "prerequisites": "MATH 251"
           },
           {
             "courseCode": "NUCE 310W",
             "credits": "2",
-            "prerequisites": "MATH 230"
+            "prerequisites": "59 or more credits"
           }
         ]
       },
@@ -177,27 +177,27 @@
           {
             "courseCode": "EMCH 315",
             "credits": "2",
-            "prerequisites": "MATH 251"
+            "prerequisites": "EMCH 210"
           },
           {
             "courseCode": "EMCH 316",
             "credits": "1",
-            "prerequisites": "EMCH 315"
+            "prerequisites": "ME 360"
           },
           {
             "courseCode": "NUCE 322",
             "credits": "3",
-            "prerequisites": "NUCE 309"
+            "prerequisites": "NUCE 321"
           },
           {
             "courseCode": "NUCE 302",
             "credits": "4",
-            "prerequisites": "NUCE 309"
+            "prerequisites": "NUCE 301 and 309"
           },
           {
             "courseCode": "NUCE 450",
             "credits": "3",
-            "prerequisites": "NUCE 301"
+            "prerequisites": "NUCE 301 and 309"
           }
         ]
       },
@@ -207,22 +207,22 @@
           {
             "courseCode": "NUCE 430",
             "credits": "3",
-            "prerequisites": "NUCE 321"
+            "prerequisites": "NUCE 302"
           },
           {
             "courseCode": "NUCE 420",
             "credits": "3",
-            "prerequisites": "NUCE 321, EMCH 212, MATH 230"
+            "prerequisites": "NUCE 301"
           },
           {
             "courseCode": "NUCE 403",
             "credits": "3",
-            "prerequisites": "NUCE 321, EE 212"
+            "prerequisites": "NUCE 302"
           },
           {
             "courseCode": "NUCE 451",
             "credits": "3",
-            "prerequisites": "NUCE 302"
+            "prerequisites": "EE 212 and NUCE 450"
           },
           {
             "courseCode": "NUCLEAR ENGINEERING ELECTIVE",
@@ -237,7 +237,7 @@
           {
             "courseCode": "NUCE 431W",
             "credits": "4",
-            "prerequisites": "NUCE 430"
+            "prerequisites": "NUCE 403 and 430"
           },
           {
             "courseCode": "NUCLEAR ENGINEERING ELECTIVE",
