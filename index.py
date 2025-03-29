@@ -1,6 +1,9 @@
 import streamlit as st
 from google import genai
 import json
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Centering content and text alignment
 st.markdown("""
@@ -20,7 +23,7 @@ st.title("🎓 Build Your College Plan")
 st.subheader("Tell us about your academic goals")
 
 # Gemini API
-client = genai.Client(api_key="AIzaSyCTO2GZHx0Xe8_lBHDZ9q-lX9RK3mkamiw")
+client = genai.Client(api_key=os.getenv("API_KEY"))
 
 majorDict = {
     "Computer Engineering" : "cmpen.json",
