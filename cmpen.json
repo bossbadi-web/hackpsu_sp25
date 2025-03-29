@@ -1,0 +1,255 @@
+{
+    "degreeProgram": "Computer Engineering",
+    "academicPlan": [
+      {
+        "semester": "1st Semester",
+        "credits": 15,
+        "courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": 3,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "CMPEN 111 or ENGR 100 or FYS",
+            "credits": 1
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": 4,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": 4,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "2nd Semester",
+        "credits": 17,
+        "courses": [
+          {
+            "courseCode": "CMPSC 131",
+            "credits": 3,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": 4,
+            "notes": ["Entrance to Major (ETM) requirement"],
+            "prerequisites": ["MATH 140"]
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": 4,
+            "prerequisites": ["PHYS 211"]
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "3rd Semester",
+        "credits": 18,
+        "courses": [
+          {
+            "courseCode": "CMPEN 270",
+            "credits": 4,
+            "prerequisites": ["CMPSC 131", "MATH 141"]
+          },
+          {
+            "courseCode": "CMPSC 132",
+            "credits": 3,
+            "prerequisites": ["CMPSC 131"]
+          },
+          {
+            "courseCode": "MATH 250",
+            "credits": 3,
+            "prerequisites": ["MATH 141"]
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": 3,
+            "prerequisites": ["MATH 141"]
+          },
+          {
+            "courseCode": "PHYS 214",
+            "credits": 2,
+            "prerequisites": ["PHYS 212"]
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "4th Semester",
+        "credits": 15,
+        "courses": [
+          {
+            "courseCode": "CMPEN 331",
+            "credits": 3,
+            "prerequisites": ["CMPEN 270", "CMPSC 132"]
+          },
+          {
+            "courseCode": "CMPSC 221",
+            "credits": 3,
+            "prerequisites": ["CMPSC 132", "MATH 250"]
+          },
+          {
+            "courseCode": "EE 210",
+            "credits": 4,
+            "prerequisites": ["PHYS 212","MATH 220"]
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH 231",
+            "credits": 2,
+            "concurrent": ["MATH 250"]
+          }
+        ]
+      },
+      {
+        "semester": "5th Semester",
+        "credits": 16,
+        "courses": [
+          {
+            "courseCode": "CMPEN 431",
+            "credits": 3,
+            "prerequisites": ["CMPEN 331"]
+          },
+          {
+            "courseCode": "CMPSC 311",
+            "credits": 3,
+            "prerequisites": ["CMPSC 221"]
+          },
+          {
+            "courseCode": "CMPSC 360",
+            "credits": 3,
+            "prerequisites": ["CMPSC 221"]
+          },
+          {
+            "courseCode": "EE 310",
+            "credits": 4,
+            "prerequisites": ["EE 210"]
+          },
+          {
+            "courseCode": "STAT 418",
+            "credits": 3,
+            "prerequisites": ["MATH 220"]
+          }
+        ]
+      },
+      {
+        "semester": "6th Semester",
+        "credits": 15,
+        "courses": [
+          {
+            "courseCode": "CMPEN 362",
+            "credits": 3,
+            "prerequisites": ["CMPEN 331"]
+          },
+          {
+            "courseCode": "CMPSC 465",
+            "credits": 3,
+            "prerequisites": ["CMPSC 311","CMPSC 360"]
+          },
+          {
+            "courseCode": "CMPSC 473",
+            "credits": 3,
+            "prerequisites":["CMPSC 311", "EE 310"]
+          },
+          {
+            "courseCode": "EE 353",
+            "credits": 3,
+             "prerequisites": ["EE 310"]
+          },
+          {
+            "courseCode": "ENGL 202C",
+            "credits": 3,
+            "notes": ["ENGL 015 is Prerequisite"],
+            "prerequisites": ["ENGL 015"]
+          }
+        ]
+      },
+      {
+        "semester": "7th Semester",
+        "credits": 16.5,
+        "courses": [
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": 3
+          },
+          {
+            "courseCode": "Computer Engineering Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "CMPEN 482W",
+            "credits": 3,
+            "prerequisites":["CMPSC 465"]
+          },
+          {
+            "courseCode": "Department List Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          },
+          {
+            "courseCode": "GHW",
+            "credits": 1.5
+          }
+        ]
+      },
+      {
+        "semester": "8th Semester",
+        "credits": 16.5,
+        "courses": [
+          {
+            "courseCode": "CMPEN/CMPSC 4XX",
+            "credits": 3,
+             "prerequisites": ["CMPSC 473"]
+          },
+          {
+            "courseCode": "Computer Engineering Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "CMPEN/CMPSC 4XX",
+            "credits": 3,
+            "prerequisites":["CMPSC 465"]
+          },
+          {
+            "courseCode": "Department List Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          },
+          {
+            "courseCode": "GHW",
+            "credits": 1.5
+          }
+        ]
+      }
+    ]
+  }

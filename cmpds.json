@@ -1,0 +1,250 @@
+
+{
+    "Computational Data Science": {
+      "1st Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 131 Or CMPSC121",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "DS 200 Or STAT 200",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ENGR 100 or Any FYS",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 132 Or CMPSC 122",
+            "credits": "3",
+            "prerequisites": "CMPSC 131 or CMPSC121"
+          },
+          {
+            "courseCode": "DS 220",
+            "credits": "3",
+            "prerequisites": "DS 200 or STAT 200, MATH 140"
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "18",
+        "Courses": [
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CMPSC 221",
+            "credits": "3",
+            "prerequisites": "CMPSC 132 or CMPSC 122"
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "MATH 230",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "STAT 184",
+            "credits": "2",
+            "prerequisites": "Requires being in-major"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 360",
+            "credits": "3",
+            "prerequisites": "CMPSC 221, MATH 220"
+          },
+          {
+            "courseCode": "STAT 380",
+            "credits": "3",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "courseCode": "STAT 414",
+            "credits": "3",
+            "prerequisites": "MATH 230"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 442 Or DS 442",
+            "credits": "3",
+            "prerequisites": "CMPSC 360"
+          },
+          {
+            "courseCode": "CMPSC 465",
+            "credits": "3",
+            "prerequisites": "CMPSC 221"
+          },
+          {
+            "courseCode": "DS 435",
+            "credits": "3",
+            "prerequisites": "DS 220, STAT 380"
+          },
+          {
+            "courseCode": "STAT 415",
+            "credits": "3",
+            "prerequisites": "STAT 414"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "DS 410 or CMPSC 410",
+            "credits": "3",
+            "prerequisites": "CMPSC 442 or DS 442"
+          },
+          {
+            "courseCode": "CMPSC 461",
+            "credits": "3",
+            "prerequisites": "CMPSC 221, MATH 230"
+          },
+          {
+            "courseCode": "CMPSC 448",
+            "credits": "3",
+            "prerequisites": "CMPSC 465"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+                  {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "DEPARTMENT LIST ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "DS 340W",
+            "credits": "3",
+            "prerequisites": "DS 435"
+          },
+          {
+            "courseCode": "OPTION A",
+            "credits": "3",
+            "prerequisites": "CMPEN 454, CMPSC 450, CMPSC 456, CMPSC 455, MATH 484 or 452"
+          },
+          {
+            "courseCode": "OPTION B",
+            "credits": "3",
+            "prerequisites": "CMPSC 431W, EE 456, IST 441, STAT 416, 440, 460, 461, 462, or MATH 486, 448"
+          },
+           {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+            {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "13.5",
+        "Courses": [
+            {
+            "courseCode": "OPTION A",
+            "credits": "3",
+            "prerequisites": "CMPEN 454, CMPSC 450, CMPSC 456, CMPSC 455, MATH 484 or 452"
+          },
+          {
+            "courseCode": "OPTION B",
+            "credits": "3",
+            "prerequisites": "CMPSC 431W, EE 456, IST 441, STAT 416, 440, 460, 461, 462, or MATH 486, 448"
+          },
+         {
+            "courseCode": "DS 440",
+            "credits": "3",
+            "prerequisites": "DS 340"
+          },
+           {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+           {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }

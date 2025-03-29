@@ -1,0 +1,247 @@
+
+
+{
+    "Electrical Engineering": {
+      "1st Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EE 8 or EE 9 or ENGR 100",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 131",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EDSGN 100",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 132",
+            "credits": "3",
+            "prerequisites": "CMPSC 131"
+          },
+          {
+            "courseCode": "CMPEN 270 or CMPEN 271 and 275",
+            "credits": "4",
+            "prerequisites": "CMPSC 131, MATH 141"
+          },
+          {
+            "courseCode": "EE 210",
+            "credits": "4",
+            "prerequisites": "MATH 141, PHYS 212"
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "MATH 250",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EE 200",
+            "credits": "3",
+            "prerequisites": "CMPEN 270 or CMPEN 271 and 275, EE 210"
+          },
+          {
+            "courseCode": "EE 310",
+            "credits": "4",
+            "prerequisites": "EE 210, MATH 220"
+          },
+          {
+            "courseCode": "MATH 230",
+            "credits": "4",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "courseCode": "PHYS 214",
+            "credits": "2",
+            "prerequisites": "PHYS 212"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "EE 330",
+            "credits": "4",
+            "prerequisites": "EE 200"
+          },
+          {
+            "courseCode": "EE 340",
+            "credits": "4",
+            "prerequisites": "EE 210, MATH 230"
+          },
+          {
+            "courseCode": "EE 350",
+            "credits": "4",
+            "prerequisites": "EE 210, MATH 230"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "EE 300W",
+            "credits": "3",
+            "prerequisites": "EE 330, EE 340"
+          },
+          {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+          {
+            "courseCode": "EE / CMPEN 300 LEVEL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "EE / CMPEN 300 LEVEL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "EE 403W",
+            "credits": "3",
+            "prerequisites": "EE 300W"
+          },
+          {
+            "courseCode": "EE / CMPEN 300/400 LEVEL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "RELATED ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "STATISTICS ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "EE / CMPEN 400 LEVEL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "EE / CMPEN 400 LEVEL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "RELATED ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }
+  

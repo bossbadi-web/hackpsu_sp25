@@ -1,0 +1,266 @@
+
+{
+    "Industrial Engineering": {
+      "1st Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EDSGN 100",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CHEM 111",
+            "credits": "1",
+            "prerequisites": "CHEM 110"
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "IE 100 or ENGR 100 or FYS",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "EMCH 210",
+            "credits": "5",
+            "prerequisites": "PHYS 211, MATH 141"
+          },
+          {
+            "courseCode": "MATH 250",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "MATH 231",
+            "credits": "2",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "18",
+        "Courses": [
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CMPSC 200 or CMPSC 201",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "ENGINEERING ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "ENGINEERING ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "SCIENCE ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "IE 327",
+            "credits": "3",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "courseCode": "IE 305",
+            "credits": "3",
+            "prerequisites": "EMCH 210, MATH 220"
+          },
+          {
+            "courseCode": "IE 322",
+            "credits": "3",
+            "prerequisites": "MATH 231"
+          },
+          {
+            "courseCode": "IE 302",
+            "credits": "3",
+            "prerequisites": "EMCH 210, MATH 231"
+          },
+          {
+            "courseCode": "MATSE 259",
+            "credits": "3",
+            "prerequisites": "PHYS 212"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+          {
+            "courseCode": "IE 323",
+            "credits": "3",
+            "prerequisites": "IE 305, IE 322, IE 327"
+          },
+          {
+            "courseCode": "IE 330",
+            "credits": "3",
+            "prerequisites": "IE 305, IE 322, IE 327"
+          },
+          {
+            "courseCode": "IE 405",
+            "credits": "3",
+            "prerequisites": "IE 302"
+          },
+          {
+            "courseCode": "MANUFACTURING PROCESS ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "IE 408, 418, or 419",
+            "credits": "3",
+            "prerequisites": "Varies by course"
+          },
+          {
+            "courseCode": "IE 425",
+            "credits": "3",
+            "prerequisites": "CMPSC 200 or CMPSC 201, IE 323, IE 330, STAT 401"
+          },
+          {
+            "courseCode": "IE 460",
+            "credits": "3",
+            "prerequisites": "IE 323, IE 330"
+          },
+          {
+            "courseCode": "IE 470",
+            "credits": "3",
+            "prerequisites": "IE 405"
+          },
+          {
+            "courseCode": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by course"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "IE 453",
+            "credits": "3",
+            "prerequisites": "IE 425"
+          },
+          {
+            "courseCode": "IE 480W",
+            "credits": "3",
+            "prerequisites": "IE 425"
+          },
+          {
+            "courseCode": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by course"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }
+  

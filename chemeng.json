@@ -1,0 +1,283 @@
+
+{
+    "Chemical Engineering": {
+      "1st Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CHEM 111",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CHE 100 Or ENGR 100",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EDSGN 100",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "18",
+        "Courses": [
+          {
+            "courseCode": "CHEM 112",
+            "credits": "3",
+            "prerequisites": "CHEM 110"
+          },
+          {
+            "courseCode": "CHEM 113",
+            "credits": "1",
+            "prerequisites": "CHEM 111"
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "CHEM 210",
+            "credits": "3",
+            "prerequisites": "CHEM 112, CHEM 113"
+          },
+          {
+            "courseCode": "CH E 210",
+            "credits": "3",
+            "prerequisites": "PHYS 211, MATH 141"
+          },
+          {
+            "courseCode": "MATH 251",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "15.5",
+        "Courses": [
+          {
+            "courseCode": "CHEM 212",
+            "credits": "3",
+            "prerequisites": "CHEM 210"
+          },
+          {
+            "courseCode": "CHEM 213",
+            "credits": "2",
+            "prerequisites": "CHEM 210"
+          },
+          {
+            "courseCode": "MATH 231",
+            "credits": "2",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "courseCode": "CH E 220",
+            "credits": "3",
+            "prerequisites": "CH E 210"
+          },
+          {
+            "courseCode": "CH E 230",
+            "credits": "1",
+            "prerequisites": "PHYS 212"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "18",
+        "Courses": [
+          {
+            "courseCode": "BMB 251 OR MICRB 251",
+            "credits": "3",
+            "prerequisites": "CHEM 212"
+          },
+          {
+            "courseCode": "CH E 320",
+            "credits": "3",
+            "prerequisites": "CHEM 213, MATH 231"
+          },
+          {
+            "courseCode": "CH E 330",
+            "credits": "3",
+            "prerequisites": "CHEM 213, MATH 231"
+          },
+          {
+            "courseCode": "PROFESSIONAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "CHEM 457",
+            "credits": "2",
+            "prerequisites": "CHEM 212"
+          },
+          {
+            "courseCode": "CH E 300",
+            "credits": "1",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CH E 350",
+            "credits": "3",
+            "prerequisites": "CH E 220, CH E 230"
+          },
+          {
+            "courseCode": "PHYSICAL CHEMISTRY ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          },
+          {
+             "courseCode": "CH E 340",
+             "credits": "3",
+             "prerequisites": "CH E 220"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "18",
+        "Courses": [
+          {
+            "courseCode": "CH E 410",
+            "credits": "3",
+            "prerequisites": "CHE 230"
+          },
+          {
+            "courseCode": "CH E 430",
+            "credits": "3",
+            "prerequisites": "CH E 320, CH E 330"
+          },
+          {
+            "courseCode": "CH E 452",
+            "credits": "3",
+            "prerequisites": "MATH 251, CH E 350, CHE 300"
+          },
+          {
+            "courseCode": "CHEMICAL ENGINEERING ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+           {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+          {
+             "courseCode": "MATERIALS ELECTIVE",
+             "credits": "3",
+             "prerequisites": "Varies by elective"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CH E ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "CH E 470",
+            "credits": "3",
+            "prerequisites": "CH E 350"
+          },
+          {
+            "courseCode": "CH E 480W",
+            "credits": "3",
+            "prerequisites": "CH E 430"
+          },
+          {
+            "courseCode": "ENGINEERING ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "PROFESSIONAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          }
+        ]
+      }
+    }
+  }
+  
+  
+  

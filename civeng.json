@@ -1,0 +1,270 @@
+{
+    "Civil Engineering": {
+      "1st Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "name": "CHEM 110",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "EDSGN 100",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "CE 100S or ENGR 100 or FYS",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "name": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "name": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "name": "CHEM 111",
+            "credits": "1",
+            "prerequisites": "CHEM 110"
+          },
+          {
+            "name": "ECON 102 or 104",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "name": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "name": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "name": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "GEOSC 001",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "EMCH 211",
+            "credits": "3",
+            "prerequisites": "PHYS 211, MATH 141"
+          },
+          {
+            "name": "MATH 251",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "name": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "18",
+        "Courses": [
+          {
+            "name": "CMPSC 200 or CMPSC 201",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "EMCH 212",
+            "credits": "3",
+            "prerequisites": "PHYS 211, MATH 141"
+          },
+          {
+            "name": "EMCH 213 or EMCH 213D",
+            "credits": "3",
+            "prerequisites": "PHYS 211, MATH 141"
+          },
+          {
+            "name": "IE 424 or STAT 401",
+            "credits": "3",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "name": "MATH 220",
+            "credits": "3",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "name": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "name": "CE 310",
+            "credits": "3",
+            "prerequisites": "EMCH 212, EMCH 211"
+          },
+          {
+            "name": "CE 360",
+            "credits": "3",
+            "prerequisites": "EMCH 212"
+          },
+          {
+            "name": "CE 336",
+            "credits": "3",
+            "prerequisites": "EMCH 213 or EMCH 213D"
+          },
+          {
+            "name": "CE 340",
+            "credits": "3",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "name": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "name": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "13",
+        "Courses": [
+          {
+            "name": "CE 321",
+            "credits": "3",
+            "prerequisites": "CE 310"
+          },
+          {
+            "name": "CE 335",
+            "credits": "3",
+            "prerequisites": "CE 360"
+          },
+          {
+            "name": "CE 337",
+            "credits": "1",
+            "prerequisites": "CE 336"
+          },
+          {
+            "name": "CE 370",
+            "credits": "3",
+            "prerequisites": "CE 336"
+          },
+          {
+            "name": "ME 201",
+            "credits": "3",
+            "prerequisites": "PHYS 211"
+          },
+          {
+            "name": "CE 332",
+            "credits": "3",
+            "prerequisites": "MATH 220"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "name": "CE ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "name": "CE ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "name": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+          {
+            "name": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "name": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "name": "CE CAPSTONE DESIGN",
+            "credits": "3",
+            "prerequisites": "Varies by Capstone Project"
+          },
+          {
+            "name": "CE ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "name": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "name": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "name": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }
+  

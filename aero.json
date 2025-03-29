@@ -1,0 +1,281 @@
+{
+    "degreeProgram": "Aerospace Engineering",
+    "academicPlan": [
+      {
+        "semester": "1st Semester",
+        "credits": 15,
+        "courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": 3,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": 3
+          },
+          {
+            "courseCode": "AERSP 001 or ENGR 100",
+            "credits": 1
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": 4,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": 4,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          }
+        ]
+      },
+      {
+        "semester": "2nd Semester",
+        "credits": 17,
+        "courses": [
+          {
+            "courseCode": "EDSGN 100",
+            "credits": 3,
+            "notes": ["Entrance to Major (ETM) requirement"]
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": 3
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": 4,
+            "notes": ["Entrance to Major (ETM) requirement"],
+            "prerequisites": ["MATH 140"]
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": 4,
+            "prerequisites": ["PHYS 211"]
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "3rd Semester",
+        "credits": 17,
+        "courses": [
+          {
+            "courseCode": "CMPSC 201",
+            "credits": 3
+          },
+          {
+            "courseCode": "EMCH 210",
+            "credits": 5,
+            "prerequisites": ["MATH 141","PHYS 212"]
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": 3,
+             "prerequisites": ["MATH 141"]
+          },
+          {
+            "courseCode": "MATH 250",
+            "credits": 3,
+             "prerequisites": ["MATH 141"]
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "4th Semester",
+        "credits": 16,
+        "courses": [
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": 3
+          },
+          {
+            "courseCode": "EMCH 212",
+            "credits": 3,
+             "prerequisites": ["EMCH 210"]
+          },
+          {
+            "courseCode": "EMCH 315",
+            "credits": 2,
+             "prerequisites": ["EMCH 210"]
+          },
+          {
+            "courseCode": "EMCH 316",
+            "credits": 1,
+             "concurrent": ["EMCH 315"]
+          },
+          {
+            "courseCode": "MATH 230",
+            "credits": 4,
+             "prerequisites": ["MATH 220","MATH 250"]
+          },
+          {
+            "courseCode": "ME 201",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "5th Semester",
+        "credits": 16.5,
+        "courses": [
+          {
+            "courseCode": "AERSP 301",
+            "credits": 3,
+            "notes": ["Prerequisites include MATH 250, 230, and 220"],
+            "prerequisites": ["EMCH 212"]
+          },
+          {
+            "courseCode": "AERSP 309",
+            "credits": 3,
+            "notes": ["Prerequisites include MATH 250, 230, and 220"],
+            "prerequisites": ["EMCH 212"]
+          },
+          {
+            "courseCode": "AERSP 311",
+            "credits": 3,
+            "notes": ["Prerequisites include MATH 250, 230, and 220"]
+             ,"prerequisites": ["EMCH 315"]
+          },
+          {
+            "courseCode": "AERSP 313",
+            "credits": 3,
+            "notes": ["Prerequisites include MATH 250, 230, and 220"]
+             ,"prerequisites": ["EMCH 315"]
+          },
+          {
+            "courseCode": "ENGL 202C",
+            "credits": 3,
+            "prerequisite": "ENGL 015"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": 1.5
+          }
+        ]
+      },
+      {
+        "semester": "6th Semester",
+        "credits": 17,
+        "courses": [
+          {
+            "courseCode": "AERSP 304",
+            "credits": 3,
+            "prerequisites": ["AERSP 301"]
+          },
+          {
+            "courseCode": "AERSP 305W",
+            "credits": 3,
+            "concurrent": ["AERSP 309"]
+          },
+          {
+            "courseCode": "AERSP 306",
+            "credits": 3,
+            "prerequisites": ["AERSP 311"]
+          },
+          {
+            "courseCode": "AERSP 312",
+            "credits": 3,
+            "prerequisites": ["AERSP 313"]
+          },
+          {
+            "courseCode": "PHYS 214",
+            "credits": 2,
+            "requires": "MATH 141 & PHYS 212",
+             "prerequisites": ["PHYS 212"]
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      },
+      {
+        "semester": "7th Semester",
+        "credits": 16.5,
+        "courses": [
+          {
+            "courseCode": "AERSP 401A or AERSP 402A",
+            "credits": 3
+          },
+          {
+            "courseCode": "AERSP 413 or AERSP 450",
+            "credits": 3,
+            "notes": ["AERSP 413 requires AERSP 306, AERSP 450 requires AERSP 309"]
+          },
+          {
+            "courseCode": "AERSP 410",
+            "credits": 3,
+            "prerequisites": ["AERSP 306"]
+          },
+          {
+            "courseCode": "AERSP Technical Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "Technical Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "GHW",
+            "credits": 1.5
+          }
+        ]
+      },
+      {
+        "semester": "8th Semester",
+        "credits": 17,
+        "courses": [
+          {
+            "courseCode": "AERSP 401B or AERSP 402B",
+            "credits": 2,
+            "prerequisites": ["AERSP 401A or AERSP 402A"]
+          },
+          {
+            "courseCode": "AERSP Technical Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "Select One (Check prereqs)",
+            "courses": [
+              {
+                "courseCode": "EE 210",
+                "credits": 3
+              },
+              {
+                "courseCode": "EE 212",
+                "credits": 3
+              },
+              {
+                "courseCode": "AERSP 424",
+                "credits": 3,
+                "prerequisites":["AERSP 312"]
+              }
+            ]
+          },
+          {
+            "courseCode": "Limited Elective",
+            "credits": 3
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": 3
+          }
+        ]
+      }
+    ]
+}
+
+

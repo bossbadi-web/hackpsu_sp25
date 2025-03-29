@@ -1,0 +1,265 @@
+
+{
+    "Nuclear Engineering": {
+      "1st Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CHEM 111",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EDSGN 100",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "NUCE 297",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 200",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EMCH 211",
+            "credits": "3",
+            "prerequisites": "MATH 141, PHYS 211"
+          },
+          {
+            "courseCode": "MATH 251",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "EMCH 212",
+            "credits": "3",
+            "prerequisites": "EMCH 211, PHYS 212, MATH 251"
+          },
+          {
+            "courseCode": "EMCH 213 or EMCH 213D",
+            "credits": "3",
+            "prerequisites": "EMCH 211, PHYS 212, MATH 251"
+          },
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 230",
+            "credits": "4",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "courseCode": "PHYS 214",
+            "credits": "2",
+            "prerequisites": "PHYS 212"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "NUCE 321",
+            "credits": "3",
+            "prerequisites": "CHEM 110"
+          },
+          {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+          {
+            "courseCode": "NUCE 301",
+            "credits": "4",
+            "prerequisites": "MATH 230"
+          },
+          {
+            "courseCode": "NUCE 309",
+            "credits": "3",
+            "prerequisites": "MATH 230"
+          },
+          {
+            "courseCode": "NUCE 310W",
+            "credits": "2",
+            "prerequisites": "MATH 230"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "EE 212",
+            "credits": "3",
+            "prerequisites": "PHYS 212"
+          },
+          {
+            "courseCode": "EMCH 315",
+            "credits": "2",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "courseCode": "EMCH 316",
+            "credits": "1",
+            "prerequisites": "EMCH 315"
+          },
+          {
+            "courseCode": "NUCE 322",
+            "credits": "3",
+            "prerequisites": "NUCE 309"
+          },
+          {
+            "courseCode": "NUCE 302",
+            "credits": "4",
+            "prerequisites": "NUCE 309"
+          },
+          {
+            "courseCode": "NUCE 450",
+            "credits": "3",
+            "prerequisites": "NUCE 301"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "NUCE 430",
+            "credits": "3",
+            "prerequisites": "NUCE 321"
+          },
+          {
+            "courseCode": "NUCE 420",
+            "credits": "3",
+            "prerequisites": "NUCE 321, EMCH 212, MATH 230"
+          },
+          {
+            "courseCode": "NUCE 403",
+            "credits": "3",
+            "prerequisites": "NUCE 321, EE 212"
+          },
+          {
+            "courseCode": "NUCE 451",
+            "credits": "3",
+            "prerequisites": "NUCE 302"
+          },
+          {
+            "courseCode": "NUCLEAR ENGINEERING ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "NUCE 431W",
+            "credits": "4",
+            "prerequisites": "NUCE 430"
+          },
+          {
+            "courseCode": "NUCLEAR ENGINEERING ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GENERAL TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+                  {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }

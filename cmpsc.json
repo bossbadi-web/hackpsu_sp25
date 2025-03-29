@@ -1,0 +1,251 @@
+
+{
+    "Computer Science": {
+      "1st Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 131",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 132",
+            "credits": "3",
+            "prerequisites": "CMPSC 131"
+          },
+          {
+            "courseCode": "CMPSC 111 or ENGR 100 or FYS",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CMPSC 221",
+            "credits": "3",
+            "prerequisites": "CMPSC 132"
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "MATH 230",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "15-16",
+        "Courses": [
+          {
+            "courseCode": "CMPEN 270",
+            "credits": "4",
+            "prerequisites": "CMPSC 132, MATH 141"
+          },
+          {
+            "courseCode": "CMPSC 311",
+            "credits": "3",
+            "prerequisites": "CMPSC 221, MATH 220"
+          },
+          {
+            "courseCode": "CMPSC 360",
+            "credits": "3",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "courseCode": "NATURAL SCIENCE ELECTIVE (GN)",
+            "credits": "2-3",
+            "prerequisites": "See bulletin"
+          },
+           {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CMPEN 331",
+            "credits": "3",
+            "prerequisites": "CMPEN 270"
+          },
+          {
+            "courseCode": "CMPSC 465",
+            "credits": "3",
+            "prerequisites": "CMPSC 311"
+          },
+          {
+            "courseCode": "STAT 318",
+            "credits": "3",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "courseCode": "CMPSC 461",
+            "credits": "3",
+            "prerequisites": "CMPSC 221, MATH 230"
+          },
+          {
+            "courseCode": "FOREIGN LANGUAGE Level 2 Proficiency",
+            "credits": "4",
+            "prerequisites": "Varies by language"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "15",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 473",
+            "credits": "3",
+            "prerequisites": "CMPSC 311"
+          },
+          {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+          {
+            "courseCode": "STAT 319",
+            "credits": "3",
+            "prerequisites": "STAT 318"
+          },
+          {
+            "courseCode": "CMPSC 464",
+            "credits": "3",
+            "prerequisites": "CMPSC 461"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "17.5",
+        "Courses": [
+          {
+            "courseCode": "CMPSC 431W or CMPSC 483W",
+            "credits": "3",
+            "prerequisites": "CMPSC 311"
+          },
+          {
+            "courseCode": "COMPUTER SCIENCE ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "DEPARTMENT LIST ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "DEPARTMENT LIST ELECTIVE",
+            "credits": "4",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "SUPPORTING COURSE",
+            "credits": "3",
+            "prerequisites": "Varies by course"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "CMPSC / CMPEN 4XX",
+            "credits": "3",
+            "prerequisites": "Varies by course"
+          },
+          {
+            "courseCode": "COMPUTER SCIENCE ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "DEPARTMENT LIST ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "SUPPORTING COURSE",
+            "credits": "3",
+            "prerequisites": "Varies by course"
+          },
+          {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }
+  

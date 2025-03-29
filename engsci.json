@@ -1,0 +1,265 @@
+{
+    "Engineering Science": {
+      "1st Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CHEM 110",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ECON 102 or 104",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "EDSGN 100",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 140",
+            "credits": "4",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "2nd Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "CHEM 111",
+            "credits": "1",
+            "prerequisites": "CHEM 110"
+          },
+          {
+            "courseCode": "CMPSC 201 or ESC 261M",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ENGL 015 or ENGL 030 or ESL 015",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "ESC 120 or ESC 121",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "MATH 141",
+            "credits": "4",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "PHYS 211",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          }
+        ]
+      },
+      "3rd Semester": {
+        "Credits": "19",
+        "Courses": [
+          {
+            "courseCode": "EMCH 210H",
+            "credits": "5",
+            "prerequisites": "MATH 140"
+          },
+          {
+            "courseCode": "MATH 220",
+            "credits": "3",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "MATH 251",
+            "credits": "4",
+            "prerequisites": "MATH 141"
+          },
+          {
+            "courseCode": "PHYS 212",
+            "credits": "4",
+            "prerequisites": "PHYS 211"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "4th Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "EMCH 212H",
+            "credits": "3",
+            "prerequisites": "EMCH 210H"
+          },
+          {
+            "courseCode": "MATH 230",
+            "credits": "4",
+            "prerequisites": "MATH 220"
+          },
+          {
+            "courseCode": "EMCH 302H",
+            "credits": "4",
+            "prerequisites": "MATH 251"
+          },
+          {
+            "courseCode": "PHYS 214",
+            "credits": "2",
+            "prerequisites": "PHYS 212"
+          },
+          {
+            "courseCode": "CAS 100 A/B",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "5th Semester": {
+        "Credits": "17",
+        "Courses": [
+          {
+            "courseCode": "EE 210",
+            "credits": "4",
+            "prerequisites": "MATH 230"
+          },
+          {
+            "courseCode": "ESC 414M",
+            "credits": "3",
+            "prerequisites": "EE 210, MATH 230"
+          },
+          {
+            "courseCode": "ESC 433",
+            "credits": "1",
+            "prerequisites": "ESC 414M"
+          },
+          {
+            "courseCode": "ESC 407",
+            "credits": "3",
+            "prerequisites": "EMCH 302H, MATH 230"
+          },
+          {
+            "courseCode": "ESC 312",
+            "credits": "3",
+            "prerequisites": "PHYS 214"
+          }
+        ]
+      },
+      "6th Semester": {
+        "Credits": "16",
+        "Courses": [
+          {
+            "courseCode": "ESC 409",
+            "credits": "1",
+            "prerequisites": "None"
+          },
+          {
+            "courseCode": "FOUNDATIONAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "CHEM 110, CHEM 112, AERSP 308H, EMCH 416H, ESC 400H, ESC 419, ESC 312"
+          },
+          {
+            "courseCode": "FOUNDATIONAL ELECTIVE",
+            "credits": "3",
+             "prerequisites": "CHEM 110, CHEM 112, AERSP 308H, EMCH 416H, ESC 400H, ESC 419, ESC 312"
+          },
+          {
+            "courseCode": "FOUNDATIONAL ELECTIVE",
+            "credits": "3",
+             "prerequisites": "CHEM 110, CHEM 112, AERSP 308H, EMCH 416H, ESC 400H, ESC 419, ESC 312"
+          },
+          {
+            "courseCode": "FOUNDATIONAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "CHEM 110, CHEM 112, AERSP 308H, EMCH 416H, ESC 400H, ESC 419, ESC 312"
+          },
+         {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "7th Semester": {
+        "Credits": "16.5",
+        "Courses": [
+          {
+            "courseCode": "ESC 410H",
+            "credits": "3",
+            "prerequisites": "ESC 407"
+          },
+          {
+            "courseCode": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "ESC 404",
+            "credits": "3",
+            "prerequisites": "ESC 407"
+          },
+          {
+            "courseCode": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+             {
+            "courseCode": "ENGL 202C",
+            "credits": "3",
+            "prerequisites": "ENGL 015 or ENGL 030 or ESL 015"
+          },
+           {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      },
+      "8th Semester": {
+        "Credits": "15.5",
+        "Courses": [
+          {
+            "courseCode": "ESC 411",
+            "credits": "2",
+            "prerequisites": "ESC 410H"
+          },
+          {
+            "courseCode": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "TECHNICAL ELECTIVE",
+            "credits": "3",
+            "prerequisites": "Varies by elective"
+          },
+          {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+           {
+            "courseCode": "GEN ED",
+            "credits": "3",
+            "prerequisites": "None"
+          },
+           {
+            "courseCode": "GHW",
+            "credits": "1.5",
+            "prerequisites": "None"
+          }
+        ]
+      }
+    }
+  }
+  
