@@ -1,0 +1,202 @@
+{
+    "Mathematics": [
+        {
+            "MATH 311W": {
+                "name": "Concepts of Discrete Mathematics",
+                "credits": "4"
+            }
+        },
+        {
+            "MATH 140": {
+                "name": "8",
+                "credits": "Select 6 credits of 400-level MATH courses 1"
+            }
+        }
+    ],
+    "Economics": [
+        {
+            "ECON 102": {
+                "name": "Introductory Microeconomic Analysis and Policy ",
+                "credits": "3"
+            }
+        },
+        {
+            "ECON 104": {
+                "name": "Introductory Macroeconomic Analysis and Policy ",
+                "credits": "3"
+            }
+        },
+        {
+            "ECON 302": {
+                "name": "Intermediate Microeconomic Analysis ",
+                "credits": "3"
+            }
+        },
+        {
+            "ECON 304": {
+                "name": "Intermediate Macroeconomic Analysis ",
+                "credits": "3"
+            }
+        }
+    ],
+    "Physics": [
+        {
+            "MATH 140": {
+                "name": "Calculus With Analytic Geometry I ",
+                "credits": "4"
+            }
+        },
+        {
+            "MATH 141": {
+                "name": "Calculus with Analytic Geometry II ",
+                "credits": "4"
+            }
+        },
+        {
+            "PHYS 211": {
+                "name": "General Physics:  Mechanics ",
+                "credits": "4"
+            }
+        },
+        {
+            "PHYS 212": {
+                "name": "General Physics:  Electricity and Magnetism ",
+                "credits": "4"
+            }
+        },
+        {
+            "PHYS 213": {
+                "name": "General Physics:  Fluids and Thermal Physics ",
+                "credits": "2"
+            }
+        },
+        {
+            "PHYS 214": {
+                "name": "General Physics:  Wave Motion and Quantum Physics ",
+                "credits": "2"
+            }
+        },
+        {
+            "PHYS 237": {
+                "name": "Introduction to Modern Physics",
+                "credits": "3"
+            }
+        }
+    ],
+    "Entrepreneurship": [
+        {
+            "ACCTG 211": {
+                "name": "Financial and Managerial Accounting for Decision Making",
+                "credits": "4"
+            }
+        },
+        {
+            "ECON 102": {
+                "name": "Introductory Microeconomic Analysis and Policy ",
+                "credits": "3"
+            }
+        },
+        {
+            "ENTR 300": {
+                "name": "Principles of Entrepreneurship",
+                "credits": "3"
+            }
+        },
+        {
+            "ENTR 320": {
+                "name": "Entrepreneurship and New Venture Creation",
+                "credits": "3"
+            }
+        },
+        {
+            "ENGL 419": {
+                "name": "Advanced Business Writing (or any 400-level Business or Economics course)",
+                "credits": "3"
+            }
+        }
+    ],
+    "Film Studies": [
+        {
+            "COMM 150N": {
+                "name": "The Art of the Cinema ",
+                "credits": "3"
+            }
+        },
+        {
+            "COMM 250": {
+                "name": "Film History and Theory ",
+                "credits": "3"
+            }
+        }
+    ],
+    "Graphic Design": [
+        {
+            "GD 100": {
+                "name": "Introduction to Graphic Design ",
+                "credits": "3"
+            }
+        },
+        {
+            "GD 101": {
+                "name": "Design Foundation I",
+                "credits": "3"
+            }
+        },
+        {
+            "GD 102": {
+                "name": "Design Foundation 2",
+                "credits": "3"
+            }
+        },
+        {
+            "GD 200": {
+                "name": "Graphic Design Studio I",
+                "credits": "3"
+            }
+        },
+        {
+            "GD 201": {
+                "name": "Typography",
+                "credits": "3"
+            }
+        },
+        {
+            "GD 405": {
+                "name": "Minor Advanced Studio",
+                "credits": "3"
+            }
+        },
+        {
+            "GD 406": {
+                "name": "Minor Capstone Studio",
+                "credits": "3"
+            }
+        }
+    ],
+    "Accounting": [
+        {
+            "ACCTG 211": {
+                "name": "Financial and Managerial Accounting for Decision Making",
+                "credits": "4"
+            }
+        },
+        {
+            "ACCTG 310": {
+                "name": "Federal Taxation I",
+                "credits": "3"
+            }
+        },
+        {
+            "ACCTG 371": {
+                "name": "Intermediate Accounting I",
+                "credits": "4"
+            }
+        },
+        {
+            "ACCTG 472": {
+                "name": "Intermediate Financial Accounting II",
+                "credits": "3"
+            }
+        }
+    ]
+}

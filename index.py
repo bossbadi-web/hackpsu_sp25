@@ -49,6 +49,21 @@ majorDict = {
 
 majorsList = list(majorDict.keys())
 
+def load_minors():
+    """Loads minors from a separate JSON file."""
+    try:
+        with open("academic_minors.json", "r") as file:
+            minors_data = json.load(file)
+        return minors_data
+    except Exception as e:
+        st.error(f"Error loading minors.json: {e}")
+        return {}
+    
+minors_json = load_minors()
+
+minors_list = list(minors_json)
+
+
 
 def extract_course_codes(json_data):
     """Extracts course codes from a curriculum JSON structure."""
@@ -120,10 +135,12 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
             f"Max Credits per Semester: {max_credits}\n"
             f"Completed Courses: {', '.join(completed_courses) if completed_courses else 'None'}\n"
             "Please generate an optimized course schedule that maximizes efficiency by prioritizing prerequisites earlier. "
-            "The student has already completed the listed courses, so they should NOT be included in the schedule. "
+            "The student has already completed the listed courses, so they should NOT be included in the schedule. The interests represent the chosen minors"
+            f"Given the minors curriculum:\n{json.dumps(minors_json, indent=2)}\n"
+            f"Use this cirrciulum to add all the necessary course work based on the chosen interests. If a course in the selected interest already exist then DO NOT duplicate"
             f"Ensure the schedule is completed within {semesters} semesters if possible, and no semester exceeds the max credits allowed. "
             "Optimize the difficulty distribution, placing harder courses earlier while ensuring prerequisites are met first. "
-            f"If it's not possible to meet the requirements within {semesters} semesters, provide the best possible alternative."
+            f"If it's not possible to meet the requirements within {semesters} semesters, provide the best possible alternative. ALWAYS start at semester 1"
             "Generate the course plan strictly in a JSON format with the following structure:\n"
             """
             {
@@ -238,7 +255,7 @@ def display_checkboxes(items):
 col1, col2, col3 = st.columns([1, 25, 1])
 with col2:
     major = st.selectbox("Select Your Major", majorsList)
-    interest = st.multiselect("Select Interests (for minors/double majors)", [])
+    interest = st.multiselect("Select Interests (for minors/double majors)", minors_list)
     years_to_graduate = st.slider("Years to Graduate", 3, 5, 4)
     max_credits = st.slider("Max Credits Per Semester", 12, 21, 15)
 
