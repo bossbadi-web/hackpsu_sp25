@@ -107,6 +107,9 @@ def query_gemini(question, data):
 
 def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
     """Generates a structured course plan using Gemini API and ensures proper JSON output."""
+
+    semesters = years_to_graduate * 2
+
     try:
         # Define the structured prompt
         prompt = (
@@ -118,9 +121,9 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
             f"Completed Courses: {', '.join(completed_courses) if completed_courses else 'None'}\n"
             "Please generate an optimized course schedule that maximizes efficiency by prioritizing prerequisites earlier. "
             "The student has already completed the listed courses, so they should NOT be included in the schedule. "
-            "Ensure the schedule is completed within 6 semesters if possible, and no semester exceeds the max credits allowed. "
+            f"Ensure the schedule is completed within {semesters} semesters if possible, and no semester exceeds the max credits allowed. "
             "Optimize the difficulty distribution, placing harder courses earlier while ensuring prerequisites are met first. "
-            "If it's not possible to meet the requirements within 6 semesters, provide the best possible alternative."
+            f"If it's not possible to meet the requirements within {semesters} semesters, provide the best possible alternative."
             "Generate the course plan strictly in a JSON format with the following structure:\n"
             """
             {
@@ -129,16 +132,16 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
                         "semester": "X Semester",
                         "credits": X,
                         "courses": [
-                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X},
-                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X}
+                            {"CID": "Course Code", "credits": X},
+                            {"CID": "Course Code", "credits": X}
                         ]
                     },
                     {
                         "semester": "X Semester",
                         "credits": X,
                         "courses": [
-                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X},
-                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X}
+                            {"CID": "Course Code", "credits": X},
+                            {"CID": "Course Code", "credits": X}
                         ]
                     }
                 ]
@@ -191,7 +194,7 @@ def display_course_plan(course_plan):
                 formatted_data.append({
                     "Semester": semester["semester"],
                     "Course Code": course["CID"],
-                    "Course Name": course.get("Course Name", "N/A"),  # Ensure key exists
+                    ##"Course Name": course.get("Course Name", "N/A"),  # Ensure key exists
                     "Credits": course["credits"]
                 })
 
@@ -247,7 +250,6 @@ with col2:
         st.subheader("📋 Select Completed Courses")
         completed_courses = display_checkboxes(course_codes)
         if st.button("Generate Course Plan"):
-            st.subheader("📅 Your Personalized Course Plan")
 
             # Generate course plan using all selected inputs
             course_plan = generate_course_plan(
