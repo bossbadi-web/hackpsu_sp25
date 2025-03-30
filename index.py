@@ -3,6 +3,7 @@ from google import genai
 import json
 import os
 from dotenv import load_dotenv
+import pandas as pd
 
 # Load environment variables
 load_dotenv()
@@ -104,55 +105,105 @@ def query_gemini(question, data):
         return None
 
 
-import json
-
 def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
-    """Generates a structured course plan using Gemini API."""
+    """Generates a structured course plan using Gemini API and ensures proper JSON output."""
     try:
-        # Define the prompt separately
+        # Define the structured prompt
         prompt = (
-            f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
-            f"and the following curriculum:\n{json.dumps(data, indent=2)}\n"
-            f"The user has already completed the following courses: {', '.join(completed_courses)}.\n"
-            "Please generate a structured course plan in a horizontal table format, "
-            "with two semesters per row. The student has already completed the courses listed, "
-            "and those courses should not appear in the plan. Ensure completion within six semesters, "
-            "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
-            "If it's not possible to create such a plan, indicate that.  Please generate a semester-by-semester optimized schedule concisely. Give me the result in a json file without explaining."
-           
-            """ Here's the format:
-            "AcademicPlan": 
-            [
-                {
-                "semester": ["X Semester"],
-                "credits": ["total credits"],
-                "courses": [
-                    {"CID": ["Course Name"], "credits": X},
-                    {"CID": ["Course Name"], "credits": X} ...
+            f"Given the major curriculum:\n{json.dumps(data, indent=2)}\n"
+            f"Major: {major}\n"
+            f"Interests: {', '.join(interests) if interests else 'None'}\n"
+            f"Years to Graduate: {years_to_graduate}\n"
+            f"Max Credits per Semester: {max_credits}\n"
+            f"Completed Courses: {', '.join(completed_courses) if completed_courses else 'None'}\n"
+            "Please generate an optimized course schedule that maximizes efficiency by prioritizing prerequisites earlier. "
+            "The student has already completed the listed courses, so they should NOT be included in the schedule. "
+            "Ensure the schedule is completed within 6 semesters if possible, and no semester exceeds the max credits allowed. "
+            "Optimize the difficulty distribution, placing harder courses earlier while ensuring prerequisites are met first. "
+            "If it's not possible to meet the requirements within 6 semesters, provide the best possible alternative."
+            "Generate the course plan strictly in a JSON format with the following structure:\n"
+            """
+            {
+                "AcademicPlan": [
+                    {
+                        "semester": "X Semester",
+                        "credits": X,
+                        "courses": [
+                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X},
+                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X}
+                        ]
+                    },
+                    {
+                        "semester": "X Semester",
+                        "credits": X,
+                        "courses": [
+                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X},
+                            {"CID": "Course Code", "Course Name": "Course Name", "credits": X}
+                        ]
+                    }
                 ]
-                }, 
-                
-                {
-                "semester": ["X Semester"],
-                "credits": 19,
-                "courses": [
-                    {"CID": ["Course Name"], "credits": X},
-                    {"CID": ["Course Name"], "credits": X} ...
-                ]
-                } """   
-            
+            }
+            """
+            "Do NOT add any additional text or explanation—only return the JSON response."
         )
 
-        # Generate the course plan using the prompt
+        # Generate the course plan using the API
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=prompt
         )
-        return response.text
+
+        # Extract response text
+        response_text = response.text.strip()
+
+        # Debugging: Print Gemini's raw response
+        # st.write("Gemini Response:", response_text)
+
+        # Extract only the JSON portion
+        json_start = response_text.find("{")
+        json_end = response_text.rfind("}") + 1
+        cleaned_json_text = response_text[json_start:json_end]
+
+        # Convert Gemini’s JSON-like string to a dictionary
+        try:
+            course_plan_json = json.loads(cleaned_json_text)
+            return course_plan_json
+        except json.JSONDecodeError as e:
+            st.error(f"Invalid JSON format from Gemini: {e}")
+            return None
+
     except Exception as e:
         st.error(f"Error generating course plan: {e}")
         return None
+    
 
+def display_course_plan(course_plan):
+    """Processes and displays the course plan in a table format using Streamlit."""
+    if not course_plan:
+        st.error("No course plan generated. Please try again.")
+        return
+    
+    try:
+        # Flatten the JSON structure
+        formatted_data = []
+        for semester in course_plan["AcademicPlan"]:
+            for course in semester["courses"]:
+                formatted_data.append({
+                    "Semester": semester["semester"],
+                    "Course Code": course["CID"],
+                    "Course Name": course.get("Course Name", "N/A"),  # Ensure key exists
+                    "Credits": course["credits"]
+                })
+
+        # Convert to DataFrame
+        df = pd.DataFrame(formatted_data)
+
+        # Display in Streamlit
+        st.subheader("📅 Your Optimized Course Plan")
+        st.table(df)
+
+    except Exception as e:
+        st.error(f"Error displaying course plan: {e}")
 
 
 
@@ -208,7 +259,4 @@ with col2:
                 completed_courses=completed_courses
             )
 
-            if course_plan:
-                st.write(course_plan)
-            else:
-                st.error("Failed to generate a course plan. Please try again.")
+            display_course_plan(course_plan)
