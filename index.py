@@ -104,50 +104,27 @@ def query_gemini(question, data):
         return None
 
 
-def filter_courses(data, completed_courses):
-    """Filters out the completed courses from the data."""
-    filtered_data = {}
-
-    def recursive_filter(obj, completed_courses):
-        """Recursively filters out courses by courseCode."""
-        if isinstance(obj, dict):
-            # Check if it's a valid semester (e.g. "1st Semester", "2nd Semester")
-            for key, value in obj.items():
-                if key in ["1st Semester", "2nd Semester"]:  # If it's a semester, recurse into it
-                    obj[key] = recursive_filter(value, completed_courses)
-                elif key == "courseCode" and obj[key] in completed_courses:
-                    return None  # Remove the course if it's completed
-                else:
-                    obj[key] = recursive_filter(value, completed_courses)  # Recurse into nested dictionaries
-
-        elif isinstance(obj, list):
-            return [recursive_filter(item, completed_courses) for item in obj]  # Handle lists of courses
-
-        return obj
-
-    # Start filtering the main data structure
-    filtered_data = recursive_filter(data, completed_courses)
-    return filtered_data
-
+import json
 
 def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
     """Generates a structured course plan using Gemini API."""
     try:
-        # Filter out the completed courses from the original data
-        filtered_data = filter_courses(data, completed_courses)
-        
-        # Generate the course plan using the filtered data
+        # Define the prompt separately
+        prompt = (
+            f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
+            f"and the following curriculum:\n{json.dumps(data, indent=2)}\n"
+            f"The user has already completed the following courses: {', '.join(completed_courses)}.\n"
+            "Please generate a structured course plan in a horizontal table format, "
+            "with two semesters per row. The student has already completed the courses listed, "
+            "and those courses should not appear in the plan. Ensure completion within six semesters, "
+            "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
+            "If it's not possible to create such a plan, indicate that."
+        )
+
+        # Generate the course plan using the prompt
         response = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=(
-                f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
-                f"and the following curriculum (excluding completed courses):\n{json.dumps(filtered_data, indent=2)}\n"
-                f"Please generate a structured course plan in a horizontal table format, "
-                "with two semesters per row. The student has already completed the courses marked as completed, "
-                "and those courses should not appear in the plan. Ensure completion within eight semesters, "
-                "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
-                "If it's not possible to create such a plan, indicate that."
-            )
+            contents=prompt
         )
         return response.text
     except Exception as e:
