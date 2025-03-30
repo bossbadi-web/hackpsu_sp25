@@ -1,46 +1,37 @@
-def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
-    """Generates a structured course plan using Gemini API."""
-    try:
-        # Define the prompt separately
-        prompt = (
-            f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
-            f"and the following curriculum:\n{json.dumps(data, indent=2)}\n"
-            f"The user has already completed the following courses: {', '.join(completed_courses)}.\n"
-            "Please generate a structured course plan in a horizontal table format, "
-            "with two semesters per row. The student has already completed the courses listed, "
-            "and those courses should not appear in the plan. Ensure completion within six semesters, "
-            "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
-            "If it's not possible to create such a plan, indicate that.  Please generate a semester-by-semester optimized schedule concisely. Give me the result in a json file without explaining."
-           
-            """ Here's the format:
-            "AcademicPlan": 
-            [
-                {
-                "semester": ["X Semester"],
-                "credits": ["total credits"],
-                "courses": [
-                    {"CID": ["Course Name"], "credits": X},
-                    {"CID": ["Course Name"], "credits": X} ...
+ f"Given the major curriculum:\n{json.dumps(data, indent=2)}\n"
+            f"Major: {major}\n"
+            f"Interests: {', '.join(interests) if interests else 'None'}\n"
+            f"Years to Graduate: {years_to_graduate}\n"
+            f"Max Credits per Semester: {max_credits}\n"
+            f"Completed Courses: {', '.join(completed_courses) if completed_courses else 'None'}\n"
+            "Please generate an optimized course schedule that maximizes efficiency by prioritizing prerequisites earlier. "
+            "The student has already completed the listed courses, so they should NOT be included in the schedule. The interests represent the chosen minors"
+            f"Given the minors curriculum:\n{json.dumps(minors_json, indent=2)}\n"
+            f"Use this cirrciulum to add all the necessary course work based on the chosen interests. If a course in the selected interest already exist then DO NOT duplicate"
+            f"Ensure the schedule is completed within {semesters} semesters if possible, and no semester exceeds the max credits allowed. "
+            "Optimize the difficulty distribution, placing harder courses earlier while ensuring prerequisites are met first. "
+            f"If it's not possible to meet the requirements within {semesters} semesters, provide the best possible alternative. ALWAYS start at semester 1"
+            "Generate the course plan strictly in a JSON format with the following structure:\n"
+            """
+            {
+                "AcademicPlan": [
+                    {
+                        "semester": "X Semester",
+                        "credits": X,
+                        "courses": [
+                            {"CID": "Course Code", "credits": X},
+                            {"CID": "Course Code", "credits": X}
+                        ]
+                    },
+                    {
+                        "semester": "X Semester",
+                        "credits": X,
+                        "courses": [
+                            {"CID": "Course Code", "credits": X},
+                            {"CID": "Course Code", "credits": X}
+                        ]
+                    }
                 ]
-                }, 
-                
-                {
-                "semester": ["X Semester"],
-                "credits": 19,
-                "courses": [
-                    {"CID": ["Course Name"], "credits": X},
-                    {"CID": ["Course Name"], "credits": X} ...
-                ]
-                } """   
-            
-        )
-
-        # Generate the course plan using the prompt
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents=prompt
-        )
-        return response.text
-    except Exception as e:
-        st.error(f"Error generating course plan: {e}")
-        return None
+            }
+            """
+            "Do NOT add any additional text or explanation—only return the JSON response."

@@ -263,7 +263,7 @@ def display_checkboxes(items):
 col1, col2, col3 = st.columns([1, 25, 1])
 with col2:
     major = st.selectbox("Select Your Major", majorsList)
-    interest = st.multiselect("Select Interests (for minors/double majors)", minors_list)
+    interest = st.multiselect("Select Interests (for minors)", minors_list)
     years_to_graduate = st.slider("Years to Graduate", 3, 5, 4)
     max_credits = st.slider("Max Credits Per Semester", 12, 21, 15)
 
