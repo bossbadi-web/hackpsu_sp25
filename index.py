@@ -118,7 +118,29 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
             "with two semesters per row. The student has already completed the courses listed, "
             "and those courses should not appear in the plan. Ensure completion within six semesters, "
             "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
-            "If it's not possible to create such a plan, indicate that."
+            "If it's not possible to create such a plan, indicate that.  Please generate a semester-by-semester optimized schedule concisely. Give me the result in a json file without explaining."
+           
+            """ Here's the format:
+            "AcademicPlan": 
+            [
+                {
+                "semester": ["X Semester"],
+                "credits": ["total credits"],
+                "courses": [
+                    {"CID": ["Course Name"], "credits": X},
+                    {"CID": ["Course Name"], "credits": X} ...
+                ]
+                }, 
+                
+                {
+                "semester": ["X Semester"],
+                "credits": 19,
+                "courses": [
+                    {"CID": ["Course Name"], "credits": X},
+                    {"CID": ["Course Name"], "credits": X} ...
+                ]
+                } """   
+            
         )
 
         # Generate the course plan using the prompt
