@@ -21,7 +21,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # UI Layout
-st.title("🎓 Build Your College Plan")
+st.title("🎓 Course Flow")
 st.subheader("Tell us about your academic goals")
 
 # Initialize Gemini API client
@@ -104,34 +104,56 @@ def query_gemini(question, data):
         return None
 
 
-def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
-    """Generates a structured course plan using Gemini API, considering user inputs."""
-    try:
-        # Remove completed courses from the data
-        filtered_data = {
-            semester: [
-                course for course in courses if course.get("courseCode") not in completed_courses
-            ]
-            for semester, courses in data.items() if isinstance(courses, list)
-        }
+def filter_courses(data, completed_courses):
+    """Filters out the completed courses from the data."""
+    filtered_data = {}
 
+    def recursive_filter(obj, completed_courses):
+        """Recursively filters out courses by courseCode."""
+        if isinstance(obj, dict):
+            # Check if it's a valid semester (e.g. "1st Semester", "2nd Semester")
+            for key, value in obj.items():
+                if key in ["1st Semester", "2nd Semester"]:  # If it's a semester, recurse into it
+                    obj[key] = recursive_filter(value, completed_courses)
+                elif key == "courseCode" and obj[key] in completed_courses:
+                    return None  # Remove the course if it's completed
+                else:
+                    obj[key] = recursive_filter(value, completed_courses)  # Recurse into nested dictionaries
+
+        elif isinstance(obj, list):
+            return [recursive_filter(item, completed_courses) for item in obj]  # Handle lists of courses
+
+        return obj
+
+    # Start filtering the main data structure
+    filtered_data = recursive_filter(data, completed_courses)
+    return filtered_data
+
+
+def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
+    """Generates a structured course plan using Gemini API."""
+    try:
+        # Filter out the completed courses from the original data
+        filtered_data = filter_courses(data, completed_courses)
+        
+        # Generate the course plan using the filtered data
         response = client.models.generate_content(
             model="gemini-2.0-flash",
             contents=(
                 f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
-                f"and the curriculum:\n{json.dumps(filtered_data, indent=2)}\n"
-                f"Create a structured course plan in a horizontal table format, "
-                f"with two semesters per row. Ensure completion within {years_to_graduate * 2} semesters, "
-                f"while keeping credit load under {max_credits} per semester. "
-                "Do not include any of these completed courses in the plan:\n"
-                f"{', '.join(completed_courses) if completed_courses else 'None'}.\n"
-                "If a valid plan cannot be generated, indicate that."
+                f"and the following curriculum (excluding completed courses):\n{json.dumps(filtered_data, indent=2)}\n"
+                f"Please generate a structured course plan in a horizontal table format, "
+                "with two semesters per row. The student has already completed the courses marked as completed, "
+                "and those courses should not appear in the plan. Ensure completion within eight semesters, "
+                "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
+                "If it's not possible to create such a plan, indicate that."
             )
         )
         return response.text
     except Exception as e:
         st.error(f"Error generating course plan: {e}")
         return None
+
 
 
 
