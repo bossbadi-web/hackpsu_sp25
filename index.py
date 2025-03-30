@@ -268,7 +268,7 @@ def botGemini(question, data):
 col1, col2, col3 = st.columns([1, 25, 1])
 
 with col2:
-    st.title("Courseflow", anchor="top")
+    st.title("Courseflow")
 
     st.subheader("Tell us about your academic goals")
     major = st.selectbox("Select Your Major", majorsList)
