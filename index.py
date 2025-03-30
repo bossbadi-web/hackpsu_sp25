@@ -104,22 +104,27 @@ def query_gemini(question, data):
         return None
 
 
+import json
+
 def generate_course_plan(data, major, interests, years_to_graduate, max_credits, completed_courses):
     """Generates a structured course plan using Gemini API."""
     try:
-        # Create a prompt with the updated instruction, including the completed courses
+        # Define the prompt separately
+        prompt = (
+            f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
+            f"and the following curriculum:\n{json.dumps(data, indent=2)}\n"
+            f"The user has already completed the following courses: {', '.join(completed_courses)}.\n"
+            "Please generate a structured course plan in a horizontal table format, "
+            "with two semesters per row. The student has already completed the courses listed, "
+            "and those courses should not appear in the plan. Ensure completion within six semesters, "
+            "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
+            "If it's not possible to create such a plan, indicate that."
+        )
+
+        # Generate the course plan using the prompt
         response = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=(
-                f"Given the major {major} with interests in {', '.join(interests) if interests else 'none'}, "
-                f"and the following curriculum:\n{json.dumps(data, indent=2)}\n"
-                f"The user has already completed the following courses: {', '.join(completed_courses)}.\n"
-                "Please generate a structured course plan in a horizontal table format, "
-                "with two semesters per row. The student has already completed the courses listed, "
-                "and those courses should not appear in the plan. Ensure completion within six semesters, "
-                "respecting prerequisite constraints and keeping the credit load under 21 per semester. "
-                "If it's not possible to create such a plan, indicate that."
-            )
+            contents=prompt
         )
         return response.text
     except Exception as e:
