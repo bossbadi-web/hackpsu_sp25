@@ -5,6 +5,13 @@ import os
 from dotenv import load_dotenv
 import pandas as pd
 
+# Display the Icon
+st.set_page_config(
+    page_title="Courseflow",
+    page_icon="coursetransicon.png",  
+)
+
+
 # Load environment variables
 load_dotenv()
 
@@ -22,7 +29,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # UI Layout
-st.title("🎓 Course Flow")
+st.title("Courseflow")
+
 st.subheader("Tell us about your academic goals")
 
 # Initialize Gemini API client
