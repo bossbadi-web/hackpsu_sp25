@@ -11,6 +11,12 @@ st.set_page_config(
     page_icon="coursetransicon.png",  
 )
 
+hide_decoration_bar_style = '''
+    <style>
+        header {visibility: hidden;}
+    </style>
+'''
+st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
 
 # Load environment variables
 load_dotenv()
@@ -29,9 +35,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # UI Layout
-st.title("Courseflow")
 
-st.subheader("Tell us about your academic goals")
+st.logo("coursetransicon.png")
 
 # Initialize Gemini API client
 api_key = os.getenv("API_KEY")
@@ -206,29 +211,30 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
     
 
 def display_course_plan(course_plan):
-    """Processes and displays the course plan in a table format using Streamlit."""
+    """Processes and displays the course plan in separate tables for each semester using Streamlit."""
     if not course_plan:
         st.error("No course plan generated. Please try again.")
         return
     
     try:
-        # Flatten the JSON structure
-        formatted_data = []
+        # Loop through each semester in the course plan
+        st.subheader("📅 Your Optimized Course Plan")
+
         for semester in course_plan["AcademicPlan"]:
+            # Flatten the course data for the current semester
+            formatted_data = []
             for course in semester["courses"]:
                 formatted_data.append({
-                    "Semester": semester["semester"],
                     "Course Code": course["CID"],
-                    ##"Course Name": course.get("Course Name", "N/A"),  # Ensure key exists
-                    "Credits": course["credits"]
+                    "Credits": round(course["credits"], 4)
                 })
 
-        # Convert to DataFrame
-        df = pd.DataFrame(formatted_data)
+            # Convert to DataFrame
+            df = pd.DataFrame(formatted_data)
 
-        # Display in Streamlit
-        st.subheader("📅 Your Optimized Course Plan")
-        st.table(df)
+            # Display the table for this semester
+            st.subheader(f"Semester: {semester['semester']}")
+            st.table(df)
 
     except Exception as e:
         st.error(f"Error displaying course plan: {e}")
@@ -262,10 +268,16 @@ def display_checkboxes(items):
 # Create centered columns
 col1, col2, col3 = st.columns([1, 25, 1])
 with col2:
+
+    st.title("Courseflow")
+
+    st.subheader("Tell us about your academic goals")
     major = st.selectbox("Select Your Major", majorsList)
     interest = st.multiselect("Select Interests (for minors/double majors)", minors_list)
     years_to_graduate = st.slider("Years to Graduate", 3, 5, 4)
     max_credits = st.slider("Max Credits Per Semester", 12, 21, 15)
+
+    st.divider()
 
     # Load major-specific data
     data = load_major_data(major)
@@ -274,6 +286,9 @@ with col2:
         
         st.subheader("📋 Select Completed Courses")
         completed_courses = display_checkboxes(course_codes)
+
+        st.divider()
+
         if st.button("Generate Course Plan"):
 
             # Generate course plan using all selected inputs

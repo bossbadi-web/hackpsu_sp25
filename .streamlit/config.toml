@@ -1,0 +1,5 @@
+[theme]
+primaryColor = "#1D8BF1"  # Electric blue for an energetic vibe
+backgroundColor = "#161D29"  # Deep navy background with a cool tone
+secondaryBackgroundColor = "#2A4763"  # Slightly darker blue for secondary sections
+textColor = "#E5F3FE"  # Soft light blue text to match the primary color
