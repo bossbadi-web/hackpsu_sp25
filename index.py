@@ -12,6 +12,9 @@ st.set_page_config(
 )
 
 
+BULLETIN_URL = "https://bulletins.psu.edu/university-course-descriptions/undergraduate/"
+
+
 # Load environment variables
 load_dotenv()
 
@@ -203,7 +206,9 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
     except Exception as e:
         st.error(f"Error generating course plan: {e}")
         return None
-    
+
+
+
 
 def display_course_plan(course_plan):
     """Processes and displays the course plan in a table format using Streamlit."""
@@ -216,10 +221,12 @@ def display_course_plan(course_plan):
         formatted_data = []
         for semester in course_plan["AcademicPlan"]:
             for course in semester["courses"]:
+                course_code = course["CID"].split()[0].lower()
+                course_url = f"{BULLETIN_URL}{course_code}/"
+
                 formatted_data.append({
                     "Semester": semester["semester"],
-                    "Course Code": course["CID"],
-                    ##"Course Name": course.get("Course Name", "N/A"),  # Ensure key exists
+                    "Course Code": f"[{course['CID']}]({course_url})",  # Hyperlink the course code
                     "Credits": course["credits"]
                 })
 
@@ -228,7 +235,7 @@ def display_course_plan(course_plan):
 
         # Display in Streamlit
         st.subheader("📅 Your Optimized Course Plan")
-        st.table(df)
+        st.markdown(df.to_markdown(index=False), unsafe_allow_html=True)  # Render as Markdown for hyperlinks
 
     except Exception as e:
         st.error(f"Error displaying course plan: {e}")
