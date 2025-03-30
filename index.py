@@ -292,7 +292,7 @@ with col2:
 
     st.subheader("Tell us about your academic goals")
     major = st.selectbox("Select Your Major", majorsList)
-    interest = st.multiselect("Select Interests (for minors/double majors)", minors_list)
+    interest = st.multiselect("Select Interests (for minors)", minors_list)
     years_to_graduate = st.slider("Years to Graduate", 3, 5, 4)
     max_credits = st.slider("Max Credits Per Semester", 12, 21, 15)
 
@@ -354,4 +354,3 @@ with st.sidebar:
         st.write(message)
 
     st.info("In the future, this will allow you to ask about professors, course preferences, etc.")
-
