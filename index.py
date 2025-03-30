@@ -208,7 +208,7 @@ def generate_course_plan(data, major, interests, years_to_graduate, max_credits,
     except Exception as e:
         st.error(f"Error generating course plan: {e}")
         return None
-    
+
 
 def display_course_plan(course_plan):
     """Processes and displays the course plan in separate tables for each semester using Streamlit."""
@@ -233,7 +233,7 @@ def display_course_plan(course_plan):
             df = pd.DataFrame(formatted_data)
 
             # Display the table for this semester
-            st.subheader(f"Semester: {semester['semester']}")
+            st.subheader(f"{semester['semester']}")
             st.table(df)
 
     except Exception as e:
