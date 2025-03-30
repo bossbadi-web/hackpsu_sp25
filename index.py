@@ -271,12 +271,12 @@ def display_multiselect(items):
     return selected_items
 
 
-def botGemini(question, data):
+def botGemini(question, data, completedCourses, minorData, minors):
     """Queries the Gemini API with a given curriculum and user question."""
     try:
         response = client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=f"Based on this curriculum:\n{json.dumps(data, indent=2)}\n\n{question} answer in approximately 200-300 words/bullet points."
+            contents=f"Based on this curriculum:\n{json.dumps(data, indent=2)}\n\n{question} answer in approximately 100-200 words/bullet points. Also these are the courses that have been done by the student {completedCourses} so use this information when curating info. Additionaly, here is the information on the all the minors offered and their course requirements {minorData}. \n Here is the minors selected by the user {minors}. Use this info as well to give concise advice to the user."
         )
         return response.text
     except Exception as e:
@@ -343,7 +343,7 @@ with st.sidebar:
             st.session_state.chat_history = []
 
             # Simulate the response (replace this with real logic later)
-            response = botGemini(chat_input, data)
+            response = botGemini(chat_input, data, completed_courses, minors_json, interest)
             st.session_state.chat_history.append(response)
 
         else:
