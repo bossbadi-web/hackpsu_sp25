@@ -14,6 +14,7 @@ st.set_page_config(
 hide_decoration_bar_style = '''
     <style>
         header {visibility: hidden;}
+        .st-emotion-cache-gi0tri {display: none}
     </style>
 '''
 st.markdown(hide_decoration_bar_style, unsafe_allow_html=True)
@@ -269,7 +270,7 @@ def display_checkboxes(items):
 col1, col2, col3 = st.columns([1, 25, 1])
 with col2:
 
-    st.title("Courseflow")
+    st.title("Courseflow", anchor="top")
 
     st.subheader("Tell us about your academic goals")
     major = st.selectbox("Select Your Major", majorsList)
