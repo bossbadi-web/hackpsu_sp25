@@ -88,9 +88,11 @@ def extract_course_codes(json_data):
             if "1st Semester" in obj or "2nd Semester" in obj:
                 traverse(obj.get("1st Semester", {}), True)
                 traverse(obj.get("2nd Semester", {}), True)
+                traverse(obj.get("3rd Semester", {}), True)
+                traverse(obj.get("4nd Semester", {}), True)
 
             for key, value in obj.items():
-                if key == "semester" and value in ["1st Semester", "2nd Semester"]:
+                if key == "semester" and value in ["1st Semester", "2nd Semester", "3rd Semester", "4th Semester"]:
                     in_valid_semester = True
                 elif key == "courseCode" and in_valid_semester:
                     course_codes.append(value)
@@ -241,29 +243,10 @@ def display_course_plan(course_plan):
         st.error(f"Error displaying course plan: {e}")
 
 
-
-def display_checkboxes(items):
-    selected_items = []
-    
-    # Create two columns
-    col1, col2 = st.columns(2)
-    
-    for idx, item in enumerate(items):
-        # Ensure unique keys by appending the index
-        unique_key = f"checkbox_{item}_{idx}"
-        
-        # Alternate between columns
-        if idx % 2 == 0:
-            with col1:
-                if st.checkbox(item, key=unique_key):
-                    selected_items.append(item)
-        else:
-            with col2:
-                if st.checkbox(item, key=unique_key):
-                    selected_items.append(item)
-    
+def display_multiselect(items):
+    """Displays a multi-select dropdown for selecting multiple items."""
+    selected_items = st.multiselect("Select items:", items)
     return selected_items
-
 
 
 # Create centered columns
@@ -286,7 +269,7 @@ with col2:
         course_codes = extract_course_codes(data)
         
         st.subheader("📋 Select Completed Courses")
-        completed_courses = display_checkboxes(course_codes)
+        completed_courses = display_multiselect(course_codes)
 
         st.divider()
 
