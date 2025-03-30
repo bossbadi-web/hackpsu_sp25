@@ -71,8 +71,10 @@ def load_minors():
     except Exception as e:
         st.error(f"Error loading minors.json: {e}")
         return {}
+
     
 minors_json = load_minors()
+
 
 minors_list = list(minors_json)
 
@@ -248,15 +250,28 @@ def display_multiselect(items):
     return selected_items
 
 
-# Create centered columns
-col1, col2, col3 = st.columns([1, 25, 1])
-with col2:
+def botGemini(question, data):
+    """Queries the Gemini API with a given curriculum and user question."""
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=f"Based on this curriculum:\n{json.dumps(data, indent=2)}\n\n{question} answer in approximately 200-300 words/bullet points."
+        )
+        return response.text
+    except Exception as e:
+        st.error(f"Error querying Gemini API: {e}")
+        return None
+    
 
+
+col1, col2, col3 = st.columns([1, 25, 1])
+
+with col2:
     st.title("Courseflow")
 
     st.subheader("Tell us about your academic goals")
     major = st.selectbox("Select Your Major", majorsList)
-    interest = st.multiselect("Select Interests (for minors)", minors_list)
+    interest = st.multiselect("Select Interests (for minors/double majors)", minors_list)
     years_to_graduate = st.slider("Years to Graduate", 3, 5, 4)
     max_credits = st.slider("Max Credits Per Semester", 12, 21, 15)
 
@@ -266,16 +281,18 @@ with col2:
     data = load_major_data(major)
     if data:
         course_codes = extract_course_codes(data)
-        
+
         st.subheader("📋 Select Completed Courses")
         completed_courses = display_multiselect(course_codes)
 
         st.divider()
 
-        if st.button("Generate Course Plan"):
+        if "course_plan" not in st.session_state:
+            st.session_state.course_plan = None
 
+        if st.button("Generate Course Plan"):
             # Generate course plan using all selected inputs
-            course_plan = generate_course_plan(
+            st.session_state.course_plan = generate_course_plan(
                 data=data, 
                 major=major, 
                 interests=interest, 
@@ -284,4 +301,37 @@ with col2:
                 completed_courses=completed_courses
             )
 
-            display_course_plan(course_plan)
+            display_course_plan(st.session_state.course_plan)
+
+        # Display the course plan if it's already in session_state
+        if st.session_state.course_plan:
+            display_course_plan(st.session_state.course_plan)
+
+# Sidebar for Chatbot and State Session
+with st.sidebar:
+    st.subheader("💬 Chat with Your Course Plan")
+
+    # Create a chat interface with a textbox and submit button
+    chat_input = st.text_input("Ask a question about your course schedule")
+
+    if "chat_history" not in st.session_state:
+        st.session_state.chat_history = []
+
+    if st.button("Submit Question"):
+        if chat_input:
+            # Clear previous question if any and add the new one
+            st.session_state.chat_history = []
+
+            # Simulate the response (replace this with real logic later)
+            response = botGemini(chat_input, data)
+            st.session_state.chat_history.append(response)
+
+        else:
+            st.warning("Please type a question to interact with your schedule.")
+
+    # Display the chat history
+    for message in st.session_state.chat_history:
+        st.write(message)
+
+    st.info("In the future, this will allow you to ask about professors, course preferences, etc.")
+
