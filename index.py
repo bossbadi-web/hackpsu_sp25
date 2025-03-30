@@ -222,24 +222,44 @@ def display_course_plan(course_plan):
         return
     
     try:
-        # Loop through each semester in the course plan
+        # Apply CSS for uniform table width
+        st.markdown("""
+            <style>
+                .dataframe {
+                    width: 100% !important;
+                    table-layout: fixed;
+                }
+                .dataframe th, .dataframe td {
+                    text-align: center !important;
+                    padding: 10px;
+                    font-size: 16px;
+                }
+            </style>
+        """, unsafe_allow_html=True)
+
         st.subheader("📅 Your Optimized Course Plan")
 
         for semester in course_plan["AcademicPlan"]:
-            # Flatten the course data for the current semester
             formatted_data = []
             for course in semester["courses"]:
+                try:
+                    # Convert string to float and format to 2 decimal places
+                    rounded_credits = f"{float(course['credits']):.2f}"
+                except ValueError:
+                    rounded_credits = "Invalid"
+
                 formatted_data.append({
                     "Course Code": course["CID"],
-                    "Credits": round(course["credits"], 4)
+                    "Credits": rounded_credits
                 })
 
-            # Convert to DataFrame
             df = pd.DataFrame(formatted_data)
 
-            # Display the table for this semester
-            st.subheader(f"{semester['semester']}")
-            st.table(df)
+            # Use columns to enforce consistent width
+            col1, col2, col3 = st.columns([1, 6, 1])  # Centered layout
+            with col2:
+                st.subheader(f"{semester['semester']}")
+                st.table(df)
 
     except Exception as e:
         st.error(f"Error displaying course plan: {e}")
@@ -291,8 +311,7 @@ with col2:
         if "course_plan" not in st.session_state:
             st.session_state.course_plan = None
 
-        if st.button("Generate Course Plan"):
-            # Generate course plan using all selected inputs
+        if st.button("Generate Course Plan", key="generate_plan_button"):
             st.session_state.course_plan = generate_course_plan(
                 data=data, 
                 major=major, 
@@ -302,11 +321,11 @@ with col2:
                 completed_courses=completed_courses
             )
 
+        # Display the course plan if it's already generated
+        if "course_plan" in st.session_state and st.session_state.course_plan:
             display_course_plan(st.session_state.course_plan)
 
-        # Display the course plan if it's already in session_state
-        if st.session_state.course_plan:
-            display_course_plan(st.session_state.course_plan)
+
 
 # Sidebar for Chatbot and State Session
 with st.sidebar:
